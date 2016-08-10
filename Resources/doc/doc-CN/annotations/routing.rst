@@ -1,10 +1,12 @@
 @Route and @Method
 ==================
 
-Usage
+用法
 -----
 
-The ``@Route`` annotation maps a route pattern with a controller::
+The ``@Route`` annotation maps a route pattern with a controller
+
+``@Route`` annotation 在控制器里映射了一个路由模板::
 
     use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
@@ -22,6 +24,8 @@ The ``@Route`` annotation maps a route pattern with a controller::
 The ``index`` action of the ``Post`` controller is now mapped to the ``/``
 URL. This is equivalent to the following YAML configuration:
 
+``Post``控制器的``index``操作现在映射到了 ``/`` URL。这等同于下边的YAML配置:
+
 .. code-block:: yaml
 
     blog_home:
@@ -29,7 +33,9 @@ URL. This is equivalent to the following YAML configuration:
         defaults: { _controller: SensioBlogBundle:Post:index }
 
 Like any route pattern, you can define placeholders, requirements, and default
-values::
+values
+
+像任何路由模板一样，你可以定义占位符，需求和默认值::
 
     /**
      * @Route("/{id}", requirements={"id" = "\d+"}, defaults={"id" = 1})
@@ -39,7 +45,9 @@ values::
     }
 
 You can also define the default value for a placeholder with
-the PHP default value::
+the PHP default value
+
+你也可以用PHP默认值为一个占位符定义默认值::
 
     /**
      * @Route("/{id}", requirements={"id" = "\d+"})
@@ -50,6 +58,8 @@ the PHP default value::
 
 You can also match more than one URL by defining additional ``@Route``
 annotations::
+
+你也可以
 
     /**
      * @Route("/", defaults={"id" = 1})
